@@ -10,7 +10,7 @@ const ExamSchedulePage = () => {
   const [startTime, setStartTime] = useState("")
   const [endTime, setEndTime] = useState("")
 
-  const [examData, setExamData] = useState([])
+  const [examData, setExamData] = useState<any[]>([])
 
   const fetchExams = () => {
     axios.get(`${process.env.NEXT_PUBLIC_API_LINK}/api/showexam`, { withCredentials: true })
